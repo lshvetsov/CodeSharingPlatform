@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Latest</title>
+    <link th:href="@{/css/styles.css}" rel="stylesheet" />
+</head>
+<body>
+<tr th:each="code : ${codes}">
+    <td><span id="load_date" th:text="${code.getDate()}"></span></td>
+    <td><pre id="code_snippet" th:text="${code.getCode()}"></pre></td>
+</tr>
+<!--<pre id="code_snippet" th:text="${code.getCode()}"></pre>-->
+<!--<span id="load_date" th:text="${code.getDate()}"></span>-->
+</body>
+</html>

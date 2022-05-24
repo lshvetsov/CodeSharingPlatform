@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code</title>
+    <link th:href="@{/css/styles.css}" rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+    <span id="load_date" th:text="${code.getDate()}"></span>
+    <span id = "views_restriction" th:if="${isViewRestricted && code.getViews() >= 0}" th:text="${code.getViews()} + ' more views allowed'"></span>
+    <span id = "time_restriction" th:if="${isTimeRestricted && code.getTime() > 0}" th:text="'The code will be available for ' + ${code.getTime()} + ' seconds'"></span>
+    <br>
+    <pre id="code_snippet"><code th:text="${code.getCode()}"></code></pre>
+</body>
+</html>

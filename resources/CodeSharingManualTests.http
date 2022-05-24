@@ -1,0 +1,33 @@
+### mvc
+
+GET http://127.0.0.1:8889/code/1
+Accept: text/html
+
+###
+
+GET http://127.0.0.1:8889/code/latest
+Accept: text/html
+
+###
+GET http://127.0.0.1:8889/code/new
+Accept: text/html
+
+### api
+GET http://localhost:8889/api/code/fbea8608-0278-4f66-a998-d4711e1f7fc9
+Content-Type: application/json
+
+###
+GET http://localhost:8889/api/code/new
+Content-Type: application/json
+
+###
+GET http://localhost:8889/api/code/latest
+Content-Type: application/json
+
+###
+POST http://localhost:8889/api/code/new
+Content-Type: application/json
+
+{
+  "code": "public static void main(String[] args) {\nSpringApplication.run(CodeSharingPlatform.class, args);\n}"
+}

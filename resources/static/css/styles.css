@@ -1,0 +1,12 @@
+#load_date {
+    color: green;
+    font-size: 15px;
+}
+#code_snippet {
+    width: 100%;   /* == 400px * .5 = 200px */
+    height: 25%;  /* == 160px * .25 = 40px */
+    padding: 1%;  /* == 400px * .05 = 20px */
+    background: silver;
+    border-style: solid;
+    text-align: left;
+}
